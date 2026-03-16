@@ -32,7 +32,7 @@ IDLE_TIMEOUT_MIN = int(os.environ.get("IDLE_TIMEOUT_MIN", "15"))
 DONE_TRIGGERS = {"готово", "готов", "всё", "все", "отправляй", "go", "done", "ок", "ok"}
 
 VSEGPT_URL = "https://api.vsegpt.ru/v1/chat/completions"
-VSEGPT_MODEL = "anthropic/claude-3.5-sonnet"  # модель с поддержкой фото
+VSEGPT_MODEL = "openai/gpt-4o-mini"
 
 # ─── STATE ────────────────────────────────────────────────────────────────────
 lot_buffer: dict = {}
