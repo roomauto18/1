@@ -232,10 +232,13 @@ async def process_lot(chat_id: int, context: ContextTypes.DEFAULT_TYPE, trigger:
 
     # Формируем content для OpenAI-формата
     content_parts = []
-    for b64 in photos[:8]:
+    for b64 in photos[:4]:
         content_parts.append({
             "type": "image_url",
-            "image_url": {"url": f"data:image/jpeg;base64,{b64}"}
+            "image_url": {
+                "url": f"data:image/jpeg;base64,{b64}",
+                "detail": "low"
+            }
         })
     if texts:
         content_parts.append({
