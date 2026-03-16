@@ -419,7 +419,7 @@ def main():
         f"Bot v2 started | source={SOURCE_CHAT_ID} | output={OUTPUT_CHAT_ID} "
         f"| timer={IDLE_TIMEOUT_MIN}min | triggers={DONE_TRIGGERS}"
     )
-    app.run_polling(drop_pending_updates=True)
+    app.run_polling(drop_pending_updates=True, connect_timeout=30, read_timeout=30, write_timeout=30, pool_timeout=30)
 
 
 if __name__ == "__main__":
